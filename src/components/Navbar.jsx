@@ -29,7 +29,7 @@ const Navbar = () => {
   ];
 
   return (
-    <header className={`navbar ${isScrolled ? 'navbar--scrolled' : ''}`}>
+    <header className={`navbar ${isScrolled ? 'navbar--scrolled' : ''} ${isMobileMenuOpen ? 'navbar--menu-open' : ''}`}>
       <div className="navbar__container container">
         <Link to="/" className="navbar__logo">
           <img src={logo} alt="Bhavani Industries" className="navbar__logo-image" />
