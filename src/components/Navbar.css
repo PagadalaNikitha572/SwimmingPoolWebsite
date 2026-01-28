@@ -26,7 +26,8 @@
   display: flex;
   align-items: center;
   gap: var(--spacing-sm);
-  z-index: 1001;
+  z-index: 1003;
+  position: relative;
 }
 
 .navbar__logo-image {
@@ -141,7 +142,8 @@
   gap: 5px;
   width: 28px;
   height: 28px;
-  z-index: 1001;
+  z-index: 1003;
+  position: relative;
 }
 
 .navbar__hamburger span {
@@ -155,6 +157,11 @@
 
 .navbar--scrolled .navbar__hamburger span {
   background: var(--color-neutral-700);
+}
+
+/* When menu is open, hamburger lines are always dark */
+.navbar__hamburger--open span {
+  background: var(--color-neutral-700) !important;
 }
 
 .navbar__hamburger--open span:nth-child(1) {
@@ -181,31 +188,43 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: var(--color-white);
+    width: 100vw;
+    height: 100vh;
+    height: 100dvh;
+    background: #ffffff;
     flex-direction: column;
     justify-content: center;
-    gap: var(--spacing-xl);
+    align-items: center;
+    gap: var(--spacing-lg);
     opacity: 0;
     visibility: hidden;
+    pointer-events: none;
     transition: all var(--transition-base);
+    z-index: 1001;
+    overflow: hidden;
   }
 
   .navbar__nav--open {
     opacity: 1;
     visibility: visible;
+    pointer-events: auto;
   }
 
-  .navbar__nav--open .navbar__link {
-    color: var(--color-neutral-700);
+  .navbar__nav .navbar__link {
+    color: var(--color-neutral-700) !important;
+    font-size: 1.25rem;
+    padding: var(--spacing-sm) 0;
   }
 
-  .navbar__link {
-    font-size: 1.5rem;
+  .navbar__nav .navbar__link:hover,
+  .navbar__nav .navbar__link--active {
+    color: var(--color-primary-600) !important;
   }
 
-  .navbar__cta {
-    margin-top: var(--spacing-lg);
+  .navbar__nav .navbar__cta {
+    margin-top: var(--spacing-md);
     padding: var(--spacing-md) var(--spacing-2xl);
+    font-size: 1rem;
   }
 
   .navbar__logo-name {
@@ -215,5 +234,14 @@
   .navbar__logo-image {
     width: 40px;
     height: 40px;
+  }
+
+  /* When menu is open, logo text should be dark */
+  .navbar--menu-open .navbar__logo-name {
+    color: var(--color-primary-700) !important;
+  }
+
+  .navbar--menu-open .navbar__logo-tagline {
+    color: var(--color-neutral-500) !important;
   }
 }
