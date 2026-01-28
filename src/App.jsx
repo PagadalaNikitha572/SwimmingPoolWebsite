@@ -10,7 +10,7 @@ import './App.css';
 
 function App() {
   return (
-    <Router basename="/pool-equipment-site">
+    <Router>
       <div className="app">
         <Navbar />
         <main className="main-content">
