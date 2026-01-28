@@ -109,10 +109,10 @@ const Home = () => {
           <div className="hero__visual">
             <div className="hero__images">
               <div className="hero__image-main">
-                <img src="/pool-equipment-site/swimming-pool.png" alt="Swimming Pool" />
+                <img src="/swimming-pool.png" alt="Swimming Pool" />
               </div>
               <div className="hero__image-secondary">
-                <img src="/pool-equipment-site/pool2.png" alt="Pool Design" />
+                <img src="/pool2.png" alt="Pool Design" />
               </div>
               <div className="hero__image-accent"></div>
             </div>
