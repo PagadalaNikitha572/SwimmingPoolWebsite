@@ -1,23 +1,25 @@
 import { useState } from 'react';
 import Button from '../components/Button';
 
-// Import product images
-import circulationPump from '../assets/products/circulation-pump.png';
-import sandFilter from '../assets/products/sand-filter.png';
-import tccaGranules from '../assets/products/tcca-granules.png';
-import copperSulphate from '../assets/products/copper-sulphate.png';
-import algaeRemoval from '../assets/products/algae-removal.png';
-import ladder from '../assets/products/ladder.png';
-import underwaterLed from '../assets/products/underwater-led.png';
-import underwaterLed2 from '../assets/products/underwater-led2.png';
-import underwaterStriplight from '../assets/products/underwater-striplight.png';
-import allTiles from '../assets/products/all-tiles.png';
-import drain from '../assets/products/drain.png';
-import holdingBar from '../assets/products/holding-bar.png';
-import quartzSand from '../assets/products/quartz-sand-media.png';
-import pvcEquipment from '../assets/products/pvc-equipment.png';
-import vacuumHead from '../assets/products/vaccum-head.png';
-import waterTestKit from '../assets/products/water-test-kit.png';
+// Import high-resolution product images
+import circulationPump from '../assets/products/high-res/circulationpump.jpg';
+import topMountSandFilter from '../assets/products/high-res/topmountsandfilter.jpg';
+import sideMountSandFilter from '../assets/products/high-res/sidemountsandfilter.jpg';
+import wallMountSandFilter from '../assets/products/high-res/wallmountsandfilter.jpg';
+import cartridgeFilter from '../assets/products/high-res/catridgefilters.jpg';
+import filterMedia from '../assets/products/high-res/filtermedia.png';
+import underwaterPoolLights from '../assets/products/high-res/underwaterpoollights.jpg';
+import poolLadders from '../assets/products/high-res/poolladders.jpg';
+import mainDrainCovers from '../assets/products/high-res/maindrainandcovers.jpg';
+import nozzle from '../assets/products/high-res/nozzle.jpg';
+import wallSkimmers from '../assets/products/high-res/wallskimmers.jpg';
+import vacuumHoses from '../assets/products/high-res/vaccumhoses.jpg';
+import vacuumHeads from '../assets/products/high-res/vaccumheads.jpg';
+import poolCleaningBrush from '../assets/products/high-res/poolcleaningbrush.png';
+import leafSkimmers from '../assets/products/high-res/leafskimmers.png';
+import telescopicPoles from '../assets/products/high-res/telescopicpoles.png';
+import waterTestKit from '../assets/products/high-res/water-test-kit.png';
+import tcca from '../assets/products/high-res/tcca.jpg';
 
 import './Products.css';
 
@@ -35,167 +37,153 @@ const Products = () => {
     { id: 'accessories', label: 'Accessories' },
   ];
 
-const products = [
-  // ===== CIRCULATION PUMPS =====
-  {
-    id: 1,
-    name: 'Swimming Pool Circulation Pumps',
-    category: 'pumps',
-    description:
-      'High-efficiency centrifugal swimming pool circulation pumps suitable for residential, commercial, and industrial pools. Available in multiple power ratings including 0.5 HP, 1 HP, 1.5 HP, 2 HP, and higher capacities. Offered in different voltage configurations (single-phase and three-phase), frequencies (50 Hz / 60 Hz), and flow rates to match specific pool requirements. Pumps feature corrosion-resistant construction, low-noise operation, and continuous-duty performance.',
-    image: circulationPump,
-    badge: 'Best Seller',
-  },
+  const products = [
+    {
+      id: 1,
+      name: 'Pool Circulation Pumps',
+      category: 'pumps',
+      description:
+        'Low-noise swimming pool circulation pumps suitable for residential, commercial, and industrial pools. Available in multiple HP ratings, single-phase and three-phase variants, and different flow capacities.',
+      image: circulationPump,
+    },
+    {
+      id: 2,
+      name: 'Top Mount Sand Filters',
+      category: 'filters',
+      description:
+        'Top mount sand filters with multiport valves for efficient pool filtration. Available in various diameters and flow rates to suit different pool sizes.',
+      image: topMountSandFilter,
+    },
+    {
+      id: 3,
+      name: 'Side Mount Sand Filters',
+      category: 'filters',
+      description:
+        'Heavy-duty side mount sand filters designed for high flow rate applications. Compatible with quartz sand and glass filter media.',
+      image: sideMountSandFilter,
+    },
+    {
+      id: 4,
+      name: 'Wall Mount Sand Filters',
+      category: 'filters',
+      description:
+        'Wall-mounted sand filters ideal for space-saving installations. Efficient filtration with easy maintenance access.',
+      image: wallMountSandFilter,
+    },
+    {
+      id: 5,
+      name: 'Cartridge Filters',
+      category: 'filters',
+      description:
+        'Cartridge filtration systems suitable for compact pool installations. Available in different filtration areas and flow capacities.',
+      image: cartridgeFilter,
+    },
+    {
+      id: 6,
+      name: 'Filter Media (Quartz & Glass)',
+      category: 'filters',
+      description:
+        'High-quality quartz sand and glass filter media available in multiple grades and particle sizes.',
+      image: filterMedia,
+    },
+    {
+      id: 7,
+      name: 'Underwater Pool Lights',
+      category: 'lights',
+      description:
+        'Stainless steel underwater LED pool lights available in white and RGB variants. Multiple wattages and transformer options available.',
+      image: underwaterPoolLights,
+    },
+    {
+      id: 8,
+      name: 'Swimming Pool Ladders',
+      category: 'ladders',
+      description:
+        'Stainless steel pool ladders including standard, camel, and U-type designs. Available in multiple step configurations.',
+      image: poolLadders,
+    },
+    {
+      id: 9,
+      name: 'Main Drains & Covers',
+      category: 'accessories',
+      description:
+        'Anti-suction main drain covers and frames available in round and square designs. Suitable for residential and commercial pools.',
+      image: mainDrainCovers,
+    },
+    {
+      id: 10,
+      name: 'Inlet Nozzles & Fittings',
+      category: 'accessories',
+      description:
+        'ABS inlet nozzles, eyeball fittings, vacuum points, and wall conduits for efficient pool water circulation.',
+      image: nozzle,
+    },
+    {
+      id: 11,
+      name: 'Wall Skimmers',
+      category: 'accessories',
+      description:
+        'Standard and wide-mouth wall skimmers with decorative face plates. Available in ABS construction.',
+      image: wallSkimmers,
+    },
+    {
+      id: 12,
+      name: 'Vacuum Hoses',
+      category: 'accessories',
+      description:
+        'Flexible PE and EVA vacuum hoses for pool cleaning. Available in different lengths and materials.',
+      image: vacuumHoses,
+    },
+    {
+      id: 13,
+      name: 'Vacuum Heads',
+      category: 'accessories',
+      description:
+        'Aluminium and flexible vacuum heads including triangular and swivel models for efficient pool cleaning.',
+      image: vacuumHeads,
+    },
+    {
+      id: 14,
+      name: 'Pool Cleaning Brushes',
+      category: 'accessories',
+      description:
+        'Wall, algae, and vacuum brushes with nylon or stainless steel bristles. Available in multiple sizes.',
+      image: poolCleaningBrush,
+    },
+    {
+      id: 15,
+      name: 'Leaf Skimmers & Rakes',
+      category: 'accessories',
+      description:
+        'Leaf skimmers and rakes designed for removing debris from pool surfaces and floors.',
+      image: leafSkimmers,
+    },
+    {
+      id: 16,
+      name: 'Telescopic Poles',
+      category: 'accessories',
+      description:
+        'Aluminium telescopic poles compatible with brushes, skimmers, and vacuum heads.',
+      image: telescopicPoles,
+    },
+    {
+      id: 17,
+      name: 'Water Test Kits',
+      category: 'accessories',
+      description:
+        'Swimming pool water testing kits for measuring pH and chlorine levels, including refill solutions.',
+      image: waterTestKit,
+    },
+    {
+      id: 18,
+      name: 'Pool Chemicals (TCCA)',
+      category: 'chemicals',
+      description:
+        'Pool disinfection and water treatment chemicals including TCCA, calcium hypochlorite, algae control, and pH balance solutions.',
+      image: tcca,
+    },
+  ];
 
-  // ===== SAND FILTERS & MEDIA =====
-  {
-    id: 2,
-    name: 'Sand Water Filters',
-    category: 'filters',
-    description:
-      'Robust sand filtration systems designed for effective removal of suspended solids and impurities from pool water. Available in various filter diameters and capacities to suit small residential pools to large commercial installations. Compatible with graded filter media such as quartz sand and glass media. Designed for high filtration efficiency, uniform flow distribution, and long service life.',
-    image: sandFilter,
-  },
-  {
-    id: 3,
-    name: 'Quartz Sand Filter Media',
-    category: 'filters',
-    description:
-      'High-purity graded quartz sand media used in swimming pool sand filters. Available in different grain sizes and grades as per filtration requirements. Ensures superior filtration performance, clear water quality, and extended filter life.',
-    image: quartzSand,
-  },
-
-  // ===== DISINFECTANT CHEMICALS =====
-  {
-    id: 4,
-    name: 'TCCA 90 Granules',
-    category: 'chemicals',
-    description:
-      'Trichloroisocyanuric Acid (TCCA) 90% granules used for long-lasting pool water disinfection. Supplied in various packaging sizes as per customer requirement. Suitable for routine chlorination, shock treatment, and maintaining hygienic pool water.',
-    image: tccaGranules,
-    badge: 'Popular',
-  },
-  {
-    id: 5,
-    name: 'Copper Sulphate',
-    category: 'chemicals',
-    description:
-      'Copper sulphate chemical used for algae prevention and control in swimming pools. Supplied in different quantities based on pool size and treatment requirement. Effective for controlling biological growth and improving water clarity.',
-    image: copperSulphate,
-  },
-  {
-    id: 6,
-    name: 'Algae Removal Chemicals',
-    category: 'chemicals',
-    description:
-      'Specially formulated algae control and removal chemicals for green, black, and mustard algae. Available in liquid or granular form and supplied in required volumes as per pool size and treatment application.',
-    image: algaeRemoval,
-  },
-
-  // ===== UNDERWATER LIGHTING =====
-  {
-    id: 7,
-    name: 'Underwater LED Pool Lights',
-    category: 'lights',
-    description:
-      'Underwater LED lighting solutions designed for swimming pool illumination and aesthetics. Available in single-color and RGB variants, multiple wattages, different LED diode configurations, and various housing designs. Suitable for both decorative and functional lighting applications.',
-    image: underwaterLed,
-  },
-  {
-    id: 8,
-    name: 'Underwater RGB & Strip Lights',
-    category: 'lights',
-    description:
-      'Waterproof RGB and strip-type LED lighting systems for pools. Available in different power ratings, color options, and installation formats. Designed for energy efficiency, durability, and long operational life in submerged conditions.',
-    image: underwaterLed2,
-    badge: 'New',
-  },
-
-  // ===== LADDERS & ACCESSORIES =====
-  {
-    id: 9,
-    name: 'Stainless Steel Pool Ladders',
-    category: 'ladders',
-    description:
-      'High-quality stainless steel swimming pool ladders designed for safe pool entry and exit. Available in different step configurations, sizes, and mounting styles. Manufactured using corrosion-resistant stainless steel suitable for long-term pool use.',
-    image: ladder,
-  },
-
-  {
-    id: 10,
-    name: 'Main Drains with Cover & Frame',
-    category: 'accessories',
-    description:
-      'Swimming pool main drains designed for efficient water circulation and drainage. Available in multiple sizes, shapes, and designs, including variants with drain cover and frame. Suitable for residential and commercial swimming pools.',
-    image: drain,
-  },
-
-  {
-    id: 11,
-    name: 'Stainless Steel Holding Bars',
-    category: 'accessories',
-    description:
-      'Stainless steel holding bars designed for pool safety and support. Available in different lengths, shapes, and mounting configurations to suit various pool designs and safety requirements.',
-    image: holdingBar,
-  },
-
-  {
-    id: 12,
-    name: 'Vacuum Heads',
-    category: 'accessories',
-    description:
-      'Swimming pool vacuum heads used for manual cleaning of pool floors and walls. Available in different sizes and designs to suit various pool types and cleaning requirements.',
-    image: vacuumHead,
-  },
-
-  {
-    id: 13,
-    name: 'Water Test Kits',
-    category: 'accessories',
-    description:
-      'Pool water testing kits for measuring chlorine levels, pH balance, and overall water quality. Supplied in different kit types based on testing requirements.',
-    image: waterTestKit,
-  },
-
-  // ===== PVC PIPES & FITTINGS =====
-  {
-    id: 14,
-    name: 'PVC Pipes & Fittings',
-    category: 'accessories',
-    description:
-      'High-quality PVC pipes and fittings used in swimming pool plumbing systems. Available in various diameters, pressure ratings, and lengths to meet different installation requirements. Resistant to chemical corrosion and suitable for long-term pool applications.',
-    image: pvcEquipment,
-
-  },
-  {
-    id: 15,
-    name: 'PVC Pool Equipment & Accessories',
-    category: 'accessories',
-    description:
-      'Durable PVC-based pool equipment and accessories used in filtration, circulation, and plumbing systems. Available in multiple configurations to match specific pool system designs.',
-    image: pvcEquipment,
-  },
-
-  // ===== TILES =====
-  {
-    id: 16,
-    name: 'Swimming Pool Tiles',
-    category: 'tiles',
-    description:
-      'Premium swimming pool tiles available in multiple designs, colors, finishes, and sizes. Designed for durability, slip resistance, and long-lasting performance in pool environments.',
-    image: allTiles,
-  },
-  {
-  id: 17,
-  name: 'Underwater LED Strip Lights',
-  category: 'lights',
-  description:
-    'Underwater LED strip lights designed for decorative and functional pool lighting. Available in multiple LED powers, diode types, color options (single color, RGB, RGBW), voltage and frequency variants. Offered in flexible and rigid strip formats. The image shown represents one model; multiple specifications and custom options are available under this category.',
-  image: underwaterStriplight,
-  badge: 'Premium',
-},
-
-];
 
 
   const filteredProducts = activeCategory === 'all' 
