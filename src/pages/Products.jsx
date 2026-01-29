@@ -17,7 +17,7 @@ import vacuumHoses from '../assets/products/high-res/vaccumhoses.png';
 import vacuumHeads from '../assets/products/high-res/vaccumheads.jpg';
 import poolCleaningBrush from '../assets/products/high-res/poolcleaningbrush.png';
 import leafSkimmers from '../assets/products/high-res/leafskimmers.png';
-import telescopicPoles from '../assets/products/high-res/telescopicpoles.png';
+import telescopicPoles from '../assets/products/high-res/telescopicpoles.jpeg';
 import waterTestKit from '../assets/products/high-res/water-test-kit.png';
 import tcca from '../assets/products/high-res/tcca.jpg';
 import tiles from '../assets/products/all-tiles.png';
