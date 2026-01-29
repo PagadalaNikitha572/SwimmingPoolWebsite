@@ -1,11 +1,11 @@
 import { Link } from 'react-router-dom';
 import Button from '../components/Button';
 
-// Import product images for homepage
-import pumpImg from '../assets/products/circulation-pump.png';
-import filterImg from '../assets/products/sand-filter.png';
-import chemicalImg from '../assets/products/tcca-granules.png';
-import ladderImg from '../assets/products/ladder.png';
+// Import high-res product images for homepage
+import pumpImg from '../assets/products/high-res/circulationpump.jpg';
+import filterImg from '../assets/products/high-res/topmountsandfilter.jpg';
+import chemicalImg from '../assets/products/high-res/filtermedia.png';
+import ladderImg from '../assets/products/high-res/poolladders.jpg';
 
 import './Home.css';
 
