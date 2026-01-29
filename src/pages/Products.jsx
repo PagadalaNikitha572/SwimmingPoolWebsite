@@ -182,6 +182,14 @@ const Products = () => {
         'Pool disinfection and water treatment chemicals including TCCA, calcium hypochlorite, algae control, and pH balance solutions.',
       image: tcca,
     },
+    {
+      id: 19,
+      name: 'Swimming Pool Tiles',
+      category: 'tiles',
+      description:
+        'Wide range of swimming pool tiles, available in mosaic tiles, plain tiles, ceramic tiles, glass mosaic tiles, and designer finishes. Offered in multiple colors, patterns, sizes, and surface textures to match different pool designs.',
+      image: tiles,
+    },
   ];
 
 
