@@ -3,7 +3,7 @@ import './Contact.css';
 
 const Contact = () => {
   const address = "H No: 07-096, J K Nagar, Subhash Nagar, Jeedimetla, Hyderabad 500 055, State - Telangana (INDIA)";
-  const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`;
+  const googleMapsUrl = `https://maps.app.goo.gl/w17TM3B5gH6pwoAKA?g_st=iw`;
 
   return (
     <div className="contact-page">
